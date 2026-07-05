@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clínica Quillay · Cuidado que echa raíces</title>
+  <meta name="description" content="Clínica Quillay — red de centros médicos en Chile. Reserva de horas en línea, urgencia 24h, telemedicina, resultados de exámenes y atención con convenios FONASA e Isapres." />
+
+  <!-- Única dependencia externa: tipografías (display + body). Quítala y el
+       sitio cae elegantemente a fuentes del sistema definidas en :root. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <!-- =====================================================================
+       BARRA UTILITARIA
+       ================================================================== -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <div class="topbar__group">
+        <a class="topbar__urgency" href="tel:+560226000000">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/></svg>
+          Urgencia 24h · 600 360 0000
+        </a>
+      </div>
+      <div class="topbar__group topbar__group--secondary">
+        <a href="tel:6003600000">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+          Call Center 600 360 0000
+        </a>
+        <a href="#resultados">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13l2 2 4-4"/></svg>
+          Resultados de exámenes
+        </a>
+        <a href="#portal">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          Portal Pacientes
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- =====================================================================
+       HEADER STICKY + NAV
+       ================================================================== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <!-- MARCA EDITABLE: cambia nombre, lema y logo aquí -->
+      <a class="brand" href="#inicio" aria-label="Clínica Quillay, inicio">
+        <svg class="brand__mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <circle cx="24" cy="24" r="23" fill="currentColor" opacity=".1"/>
+          <path d="M8 30c4-1 6-5 8-9 3 4 6 5 9 5-1-5 1-9 4-12-1 5 1 8 4 10" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M24 14c-3 2-5 6-5 10 0 5 2 9 5 12 3-3 5-7 5-12 0-4-2-8-5-10Z" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/>
+          <path d="M24 18v18" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+        </svg>
+        <span>
+          <span class="brand__name">Clínica <b>Quillay</b></span>
+          <span class="brand__tag">Cuidado que echa raíces</span>
+        </span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Navegación principal">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="#especialidades">Especialidades</a></li>
+          <li><a class="nav__link" href="#centros">Centros</a></li>
+          <li><a class="nav__link" href="#equipo">Cuerpo médico</a></li>
+          <li><a class="nav__link" href="#telemedicina">Telemedicina</a></li>
+          <li><a class="nav__link" href="#paciente">Paciente</a></li>
+          <li><a class="nav__link" href="#noticias">Noticias</a></li>
+        </ul>
+        <a class="btn btn--accent" href="#reservar">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+          Reservar hora
+        </a>
+      </nav>
+
+      <div class="header__actions">
+        <a class="btn btn--accent" href="#reservar" data-desktop-cta>Reservar hora</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
+          <span class="nav-toggle__bars"><span></span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="nav-backdrop" id="navBackdrop" hidden></div>
+
+  <main id="contenido">
+    <!-- ===================================================================
+         HERO + WIDGET DE RESERVA (protagonista)
+         ================================================================ -->
+    <section class="hero" id="inicio">
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <span class="eyebrow">Red de salud · Región Metropolitana</span>
+          <h1 class="hero__title">Tu hora médica, <em>en cuatro pasos</em> y sin filas.</h1>
+          <p class="hero__lead">En Clínica Quillay unimos tecnología y trato humano. Reserva en línea, atiéndete por telemedicina o acude a urgencia 24 horas en cualquiera de nuestros centros.</p>
+
+          <div class="hero__cta">
+            <a class="btn btn--lg btn--accent" href="#reservar">Reservar hora ahora</a>
+            <a class="btn btn--lg btn--ghost" href="#telemedicina">Conocer telemedicina</a>
+          </div>
+
+          <ul class="hero__trust">
+            <li><b>+40</b> especialidades médicas</li>
+            <li><b>3</b> centros en Santiago</li>
+            <li>
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+              Convenios FONASA e Isapres
+            </li>
+          </ul>
+        </div>
+
+        <!-- ============ WIDGET DE RESERVA (demo, no envía datos) ========== -->
+        <form class="booking" id="reservar" novalidate aria-labelledby="bookingTitle">
+          <div class="booking__head">
+            <h2 class="booking__title" id="bookingTitle">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+              Reserva de hora
+              <span class="booking__badge">Demo</span>
+            </h2>
+
+            <ol class="stepper" id="stepper" aria-hidden="true">
+              <li class="stepper__item" data-state="active"><span class="stepper__bar"></span>1. Identidad</li>
+              <li class="stepper__item"><span class="stepper__bar"></span>2. Centro</li>
+              <li class="stepper__item"><span class="stepper__bar"></span>3. Especialidad</li>
+              <li class="stepper__item"><span class="stepper__bar"></span>4. Profesional</li>
+            </ol>
+          </div>
+
+          <div class="booking__body" aria-live="polite">
+            <!-- Paso 1: RUT + previsión -->
+            <fieldset class="step is-active" data-step="1">
+              <legend class="step__title">¿Quién se atenderá?</legend>
+              <p class="step__hint">Ingresa tu RUT y previsión para mostrarte la cobertura disponible.</p>
+
+              <div class="field">
+                <label for="rut">RUT del paciente</label>
+                <input type="text" id="rut" name="rut" inputmode="text" autocomplete="off"
+                       placeholder="12.345.678-9" aria-describedby="rutError rutHelp" />
+                <p class="field__error" id="rutError">Ingresa un RUT válido (con dígito verificador).</p>
+                <p class="field__help" id="rutHelp">Se valida con módulo 11. No se envía a ningún servidor.</p>
+              </div>
+
+              <div class="field">
+                <label for="prevision">Previsión</label>
+                <select id="prevision" name="prevision" aria-describedby="prevError">
+                  <option value="">Selecciona tu previsión…</option>
+                  <option value="FONASA A">FONASA — Tramo A</option>
+                  <option value="FONASA B">FONASA — Tramo B</option>
+                  <option value="FONASA C">FONASA — Tramo C</option>
+                  <option value="FONASA D">FONASA — Tramo D</option>
+                  <option value="Isapre Banmédica">Isapre Banmédica</option>
+                  <option value="Isapre Consalud">Isapre Consalud</option>
+                  <option value="Isapre Cruz Blanca">Isapre Cruz Blanca</option>
+                  <option value="Isapre Colmena">Isapre Colmena</option>
+                  <option value="Isapre Nueva Masvida">Isapre Nueva Masvida</option>
+                  <option value="Particular">Particular</option>
+                </select>
+                <p class="field__error" id="prevError">Selecciona una previsión para continuar.</p>
+              </div>
+            </fieldset>
+
+            <!-- Paso 2: Centro -->
+            <fieldset class="step" data-step="2">
+              <legend class="step__title">Elige el centro</legend>
+              <p class="step__hint">Selecciona la sede más cercana a ti.</p>
+              <div class="options" id="centrosOptions" role="radiogroup" aria-label="Centros disponibles"></div>
+              <p class="field__error" id="centroError">Selecciona un centro para continuar.</p>
+            </fieldset>
+
+            <!-- Paso 3: Especialidad -->
+            <fieldset class="step" data-step="3">
+              <legend class="step__title">¿Qué especialidad necesitas?</legend>
+              <p class="step__hint">Mostramos las especialidades disponibles en el centro elegido.</p>
+              <div class="field">
+                <label class="field__label" for="espSelect">Especialidad</label>
+                <select id="espSelect" name="especialidad" aria-describedby="espError">
+                  <option value="">Selecciona una especialidad…</option>
+                </select>
+                <p class="field__error" id="espError">Selecciona una especialidad para continuar.</p>
+              </div>
+            </fieldset>
+
+            <!-- Paso 4: Profesional + fecha/hora -->
+            <fieldset class="step" data-step="4">
+              <legend class="step__title">Profesional y horario</legend>
+              <p class="step__hint">Elige con quién y a qué hora deseas atenderte.</p>
+              <div class="options" id="profOptions" role="radiogroup" aria-label="Profesionales disponibles"></div>
+              <p class="field__error" id="profError">Selecciona un profesional.</p>
+
+              <div class="field" style="margin-top:18px">
+                <label class="field__label" for="fecha">Fecha</label>
+                <input type="date" id="fecha" name="fecha" aria-describedby="fechaError" />
+                <p class="field__error" id="fechaError">Elige una fecha (desde hoy).</p>
+              </div>
+
+              <div class="field">
+                <span class="field__label">Horario disponible</span>
+                <div class="slots" id="slots" role="group" aria-label="Horarios disponibles"></div>
+                <p class="field__error" id="horaError">Elige un horario.</p>
+              </div>
+            </fieldset>
+
+            <!-- Confirmación -->
+            <div class="step" data-step="5">
+              <h3 class="step__title">Revisa y confirma</h3>
+              <p class="step__hint">Verifica los datos de tu reserva.</p>
+              <dl class="summary" id="summary"></dl>
+              <div class="notice" id="confirmNotice">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+                <span>Esta es una <strong>demostración</strong>. Al confirmar, no se envía información real: se prepara el paquete de datos listo para conectar a un backend PHP/MySQL.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="booking__foot">
+            <button type="button" class="btn btn--ghost" data-action="prev" hidden>
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+              Atrás
+            </button>
+            <button type="button" class="btn" data-action="next">Continuar</button>
+            <button type="submit" class="btn btn--accent" data-action="confirm" hidden>Confirmar reserva</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Firma temática: silueta de cordillera al pie del hero -->
+      <svg class="hero__ridge" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+        <path fill="currentColor" d="M0 120 L0 70 L160 28 L320 64 L480 16 L640 58 L800 22 L960 60 L1120 30 L1280 66 L1440 36 L1440 120 Z"/>
+      </svg>
+    </section>
+
+    <!-- ===================================================================
+         ACCESOS RÁPIDOS
+         ================================================================ -->
+    <section class="quick" aria-label="Accesos rápidos">
+      <div class="container quick__grid">
+        <a class="quick__card quick__card--alert reveal" href="#urgencia">
+          <span class="quick__icon">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h4l2 5 4-12 2 7h6"/></svg>
+          </span>
+          <h3>Urgencia 24h</h3>
+          <p>Atención inmediata todos los días del año.</p>
+          <span class="arrow">Cómo llegar →</span>
+        </a>
+
+        <a class="quick__card reveal" href="#resultados">
+          <span class="quick__icon">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13l2 2 4-4"/></svg>
+          </span>
+          <h3>Resultados</h3>
+          <p>Descarga tus exámenes de laboratorio e imágenes.</p>
+          <span class="arrow">Ingresar →</span>
+        </a>
+
+        <a class="quick__card reveal" href="#telemedicina">
+          <span class="quick__icon">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 8-6 4 6 4V8Z"/><rect x="2" y="6" width="14" height="12" rx="2"/></svg>
+          </span>
+          <h3>Telemedicina</h3>
+          <p>Consulta por video con especialistas desde casa.</p>
+          <span class="arrow">Agendar →</span>
+        </a>
+
+        <a class="quick__card reveal" href="#centros">
+          <span class="quick__icon">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          </span>
+          <h3>Sedes</h3>
+          <p>Ubicación, horarios y servicios de cada centro.</p>
+          <span class="arrow">Ver mapa →</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         ESPECIALIDADES + BUSCADOR EN VIVO
+         ================================================================ -->
+    <section class="section" id="especialidades">
+      <div class="container">
+        <div class="specialties__bar">
+          <div class="section__head" style="margin-bottom:0">
+            <span class="eyebrow">Especialidades</span>
+            <h2 class="section__title">Más de 40 áreas para cuidarte</h2>
+          </div>
+          <div class="specialties__tools">
+            <div class="search">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+              <input type="search" id="specSearch" placeholder="Buscar especialidad…" aria-label="Buscar especialidad" aria-describedby="specCount" />
+            </div>
+            <span class="search__count" id="specCount" role="status" aria-live="polite"></span>
+          </div>
+        </div>
+
+        <div class="specialties__grid" id="specGrid">
+          <!-- Las tarjetas se generan desde JS (assets/js/app.js) -->
+          <p class="empty-state" id="specEmpty">No encontramos especialidades con ese término. Prueba con otra palabra.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         CENTROS Y SERVICIOS
+         ================================================================ -->
+    <section class="section section--mint" id="centros">
+      <div class="container">
+        <div class="section__head">
+          <span class="eyebrow">Centros y servicios</span>
+          <h2 class="section__title">Tres sedes, una sola red de salud</h2>
+          <p class="section__lead">Cada centro cuenta con laboratorio, imagenología y toma de muestras. La urgencia opera 24/7 en nuestra sede Cordillera.</p>
+        </div>
+
+        <div class="centers__grid">
+          <!-- Centro 1 -->
+          <article class="center reveal">
+            <div class="center__media">
+              <div class="ph" style="--ph-h:190px">
+                <span class="ph__label">Fachada Centro Cordillera<small>Recomendado: 800 × 480 px (JPG)</small></span>
+              </div>
+            </div>
+            <div class="center__body">
+              <h3>Centro Cordillera</h3>
+              <ul class="center__list">
+                <li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> Av. Providencia 1234, Providencia</li>
+                <li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> Lun a Dom · Urgencia 24h</li>
+              </ul>
+              <div class="center__tags">
+                <span class="chip">Urgencia 24h</span>
+                <span class="chip">Laboratorio</span>
+                <span class="chip">Imagenología</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Centro 2 -->
+          <article class="center reveal">
+            <div class="center__media">
+              <div class="ph" style="--ph-h:190px">
+                <span class="ph__label">Fachada Centro Costanera<small>Recomendado: 800 × 480 px (JPG)</small></span>
+              </div>
+            </div>
+            <div class="center__body">
+              <h3>Centro Costanera</h3>
+              <ul class="center__list">
+                <li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> Av. Apoquindo 5678, Las Condes</li>
+                <li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> Lun a Sáb · 07:00 – 21:00</li>
+              </ul>
+              <div class="center__tags">
+                <span class="chip">Consultas</span>
+                <span class="chip">Telemedicina</span>
+                <span class="chip">Vacunatorio</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Centro 3 -->
+          <article class="center reveal">
+            <div class="center__media">
+              <div class="ph" style="--ph-h:190px">
+                <span class="ph__label">Fachada Centro Maipú<small>Recomendado: 800 × 480 px (JPG)</small></span>
+              </div>
+            </div>
+            <div class="center__body">
+              <h3>Centro Maipú</h3>
+              <ul class="center__list">
+                <li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> Av. Pajaritos 4321, Maipú</li>
+                <li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> Lun a Sáb · 08:00 – 20:00</li>
+              </ul>
+              <div class="center__tags">
+                <span class="chip">Pediatría</span>
+                <span class="chip">Kinesiología</span>
+                <span class="chip">Dental</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         CUERPO MÉDICO
+         ================================================================ -->
+    <section class="section" id="equipo">
+      <div class="container">
+        <div class="section__head">
+          <span class="eyebrow">Cuerpo médico</span>
+          <h2 class="section__title">Especialistas en quienes confiar</h2>
+          <p class="section__lead">Un equipo multidisciplinario con formación en los principales centros del país.</p>
+        </div>
+
+        <div class="staff__grid">
+          <article class="doctor reveal">
+            <div class="doctor__media"><div class="ph" style="--ph-h:200px"><span class="ph__label">Retrato profesional<small>600 × 600 px (1:1)</small></span></div></div>
+            <div class="doctor__body">
+              <h3>Dra. Valentina Rojas</h3>
+              <p class="doctor__spec">Cardiología</p>
+              <p class="doctor__meta">Universidad de Chile · 12 años de experiencia</p>
+            </div>
+          </article>
+
+          <article class="doctor reveal">
+            <div class="doctor__media"><div class="ph" style="--ph-h:200px"><span class="ph__label">Retrato profesional<small>600 × 600 px (1:1)</small></span></div></div>
+            <div class="doctor__body">
+              <h3>Dr. Matías Fuentes</h3>
+              <p class="doctor__spec">Pediatría</p>
+              <p class="doctor__meta">P. Universidad Católica · 9 años</p>
+            </div>
+          </article>
+
+          <article class="doctor reveal">
+            <div class="doctor__media"><div class="ph" style="--ph-h:200px"><span class="ph__label">Retrato profesional<small>600 × 600 px (1:1)</small></span></div></div>
+            <div class="doctor__body">
+              <h3>Dra. Camila Herrera</h3>
+              <p class="doctor__spec">Dermatología</p>
+              <p class="doctor__meta">Universidad de Concepción · 7 años</p>
+            </div>
+          </article>
+
+          <article class="doctor reveal">
+            <div class="doctor__media"><div class="ph" style="--ph-h:200px"><span class="ph__label">Retrato profesional<small>600 × 600 px (1:1)</small></span></div></div>
+            <div class="doctor__body">
+              <h3>Dr. Ignacio Soto</h3>
+              <p class="doctor__spec">Traumatología</p>
+              <p class="doctor__meta">Universidad de Valparaíso · 15 años</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         TELEMEDICINA
+         ================================================================ -->
+    <section class="section section--pine" id="telemedicina">
+      <div class="container tele">
+        <div class="tele__copy">
+          <span class="eyebrow">Telemedicina</span>
+          <h2 class="section__title">Atención por video, con la misma calidez</h2>
+          <p class="section__lead">Consulta con especialistas desde donde estés. Recibe indicaciones, recetas electrónicas y derivaciones sin salir de casa.</p>
+
+          <div class="tele__steps">
+            <div class="tele__step">
+              <span class="tele__num">1</span>
+              <div><h3>Reserva tu hora online</h3><p>Elige “Telemedicina” en el widget de reserva y selecciona al profesional.</p></div>
+            </div>
+            <div class="tele__step">
+              <span class="tele__num">2</span>
+              <div><h3>Conéctate al enlace</h3><p>Te enviamos un enlace seguro por correo y SMS minutos antes.</p></div>
+            </div>
+            <div class="tele__step">
+              <span class="tele__num">3</span>
+              <div><h3>Recibe tu receta digital</h3><p>Documentos y recetas quedan disponibles en el Portal Pacientes.</p></div>
+            </div>
+          </div>
+
+          <div style="margin-top:26px">
+            <a class="btn btn--accent btn--lg" href="#reservar">Agendar telemedicina</a>
+          </div>
+        </div>
+
+        <div class="tele__media reveal">
+          <div class="ph"><span class="ph__label">Mockup videoconsulta en notebook/celular<small>Recomendado: 720 × 900 px (PNG con fondo)</small></span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         INFO AL PACIENTE: convenios + pagos + FAQ
+         ================================================================ -->
+    <section class="section" id="paciente">
+      <div class="container">
+        <div class="section__head">
+          <span class="eyebrow">Información al paciente</span>
+          <h2 class="section__title">Coberturas, pagos y preguntas frecuentes</h2>
+        </div>
+
+        <div class="patient">
+          <!-- Columna izquierda: convenios + formas de pago -->
+          <div>
+            <div class="panel" id="convenios" style="margin-bottom:18px">
+              <h3>Convenios y previsión</h3>
+              <p>Atendemos a todas las previsiones del país.</p>
+
+              <div class="conv-tabs" role="tablist" aria-label="Tipos de convenio">
+                <button class="conv-tab" role="tab" id="tab-fonasa" aria-selected="true" aria-controls="panel-fonasa">FONASA</button>
+                <button class="conv-tab" role="tab" id="tab-isapre" aria-selected="false" aria-controls="panel-isapre">Isapres</button>
+                <button class="conv-tab" role="tab" id="tab-particular" aria-selected="false" aria-controls="panel-particular">Particular</button>
+              </div>
+
+              <div class="conv-panel is-active" id="panel-fonasa" role="tabpanel" aria-labelledby="tab-fonasa">
+                <p class="lead" style="margin-bottom:14px">Bonificación en Modalidad de Libre Elección (MLE) para tramos B, C y D, y atención en convenio para tramo A.</p>
+                <div class="logos">
+                  <div class="ph ph--logo"><span class="ph__label">Logo FONASA<small>200 × 80</small></span></div>
+                  <div class="ph ph--logo"><span class="ph__label">Bono electrónico<small>200 × 80</small></span></div>
+                  <div class="ph ph--logo"><span class="ph__label">Sello convenio<small>200 × 80</small></span></div>
+                </div>
+              </div>
+
+              <div class="conv-panel" id="panel-isapre" role="tabpanel" aria-labelledby="tab-isapre" hidden>
+                <p class="lead" style="margin-bottom:14px">Convenio directo con las principales Isapres. Emisión y validación de bonos en línea.</p>
+                <div class="logos">
+                  <div class="ph ph--logo"><span class="ph__label">Logo Isapre 1<small>200 × 80</small></span></div>
+                  <div class="ph ph--logo"><span class="ph__label">Logo Isapre 2<small>200 × 80</small></span></div>
+                  <div class="ph ph--logo"><span class="ph__label">Logo Isapre 3<small>200 × 80</small></span></div>
+                  <div class="ph ph--logo"><span class="ph__label">Logo Isapre 4<small>200 × 80</small></span></div>
+                  <div class="ph ph--logo"><span class="ph__label">Logo Isapre 5<small>200 × 80</small></span></div>
+                  <div class="ph ph--logo"><span class="ph__label">Logo Isapre 6<small>200 × 80</small></span></div>
+                </div>
+              </div>
+
+              <div class="conv-panel" id="panel-particular" role="tabpanel" aria-labelledby="tab-particular" hidden>
+                <p class="lead">Sin previsión también te atendemos. Consulta nuestros valores particulares y planes de pago en cuotas sin interés con tarjetas seleccionadas.</p>
+              </div>
+            </div>
+
+            <div class="panel">
+              <h3>Formas de pago</h3>
+              <p>Paga como te acomode, en cualquier centro.</p>
+              <div class="pay-list">
+                <div class="pay"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg> Débito y crédito</div>
+                <div class="pay"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg> Efectivo</div>
+                <div class="pay"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg> Transferencia / app</div>
+                <div class="pay"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Bono electrónico</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Columna derecha: FAQ acordeón -->
+          <div class="panel">
+            <h3>Preguntas frecuentes</h3>
+            <p>Resolvemos las dudas más comunes antes de tu visita.</p>
+
+            <div class="faq" id="faq">
+              <div class="faq__item">
+                <button class="faq__q" aria-expanded="true" aria-controls="faq1">
+                  ¿Necesito orden médica para tomarme exámenes?
+                  <svg class="icon faq__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+                </button>
+                <div class="faq__a" id="faq1"><div><p>La mayoría de los exámenes de laboratorio requieren orden médica. Algunos perfiles preventivos pueden tomarse sin orden; consúltalo en el call center.</p></div></div>
+              </div>
+
+              <div class="faq__item">
+                <button class="faq__q" aria-expanded="false" aria-controls="faq2">
+                  ¿Cómo anulo o reprogramo una hora?
+                  <svg class="icon faq__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+                </button>
+                <div class="faq__a" id="faq2"><div><p>Puedes anular o reprogramar desde el Portal Pacientes o llamando al call center, hasta 2 horas antes de tu cita sin costo.</p></div></div>
+              </div>
+
+              <div class="faq__item">
+                <button class="faq__q" aria-expanded="false" aria-controls="faq3">
+                  ¿Atienden urgencias pediátricas?
+                  <svg class="icon faq__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+                </button>
+                <div class="faq__a" id="faq3"><div><p>Sí. Nuestra urgencia del Centro Cordillera cuenta con box pediátrico y especialistas disponibles las 24 horas.</p></div></div>
+              </div>
+
+              <div class="faq__item">
+                <button class="faq__q" aria-expanded="false" aria-controls="faq4">
+                  ¿La telemedicina tiene la misma validez legal?
+                  <svg class="icon faq__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+                </button>
+                <div class="faq__a" id="faq4"><div><p>Sí. Las recetas y licencias emitidas por telemedicina tienen plena validez y se entregan de forma electrónica firmada.</p></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         NOTICIAS DE SALUD
+         ================================================================ -->
+    <section class="section section--mint" id="noticias">
+      <div class="container">
+        <div class="section__head">
+          <span class="eyebrow">Noticias de salud</span>
+          <h2 class="section__title">Aprende a cuidarte mejor</h2>
+        </div>
+
+        <div class="news__grid">
+          <article class="article reveal">
+            <div class="article__media"><div class="ph" style="--ph-h:180px"><span class="ph__label">Imagen artículo<small>800 × 450 px (16:9)</small></span></div></div>
+            <div class="article__body">
+              <div class="article__meta"><span class="article__cat">Prevención</span><span>· 12 jun 2026</span></div>
+              <h3>5 hábitos para cuidar tu corazón después de los 40</h3>
+              <p>Pequeños cambios en tu rutina diaria pueden reducir significativamente el riesgo cardiovascular.</p>
+              <a class="read" href="#noticias">Leer más →</a>
+            </div>
+          </article>
+
+          <article class="article reveal">
+            <div class="article__media"><div class="ph" style="--ph-h:180px"><span class="ph__label">Imagen artículo<small>800 × 450 px (16:9)</small></span></div></div>
+            <div class="article__body">
+              <div class="article__meta"><span class="article__cat">Pediatría</span><span>· 03 jun 2026</span></div>
+              <h3>Calendario de vacunas: lo que cambió este año</h3>
+              <p>Revisa las nuevas fechas y dosis recomendadas para niñas y niños en Chile.</p>
+              <a class="read" href="#noticias">Leer más →</a>
+            </div>
+          </article>
+
+          <article class="article reveal">
+            <div class="article__media"><div class="ph" style="--ph-h:180px"><span class="ph__label">Imagen artículo<small>800 × 450 px (16:9)</small></span></div></div>
+            <div class="article__body">
+              <div class="article__meta"><span class="article__cat">Bienestar</span><span>· 28 may 2026</span></div>
+              <h3>Salud mental: cuándo pedir ayuda profesional</h3>
+              <p>Identificar las señales a tiempo es clave. Te contamos qué observar y a quién acudir.</p>
+              <a class="read" href="#noticias">Leer más →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         BANDA CTA
+         ================================================================ -->
+    <section class="section" id="urgencia">
+      <div class="container">
+        <div class="cta-band reveal">
+          <div>
+            <h2>¿Una urgencia o una duda? Estamos contigo 24/7.</h2>
+            <p>Reserva tu hora en línea o llámanos. Nuestro equipo está listo para ayudarte en cualquier momento del día.</p>
+          </div>
+          <div class="cta-band__actions">
+            <a class="btn btn--lg btn--light" href="#reservar">Reservar hora</a>
+            <a class="btn btn--lg btn--ghost" href="tel:6003600000">Llamar al 600 360 0000</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =====================================================================
+       FOOTER
+       ================================================================== -->
+  <footer class="footer" id="portal">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__about">
+          <a class="brand" href="#inicio" aria-label="Clínica Quillay, inicio">
+            <svg class="brand__mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+              <circle cx="24" cy="24" r="23" fill="currentColor" opacity=".15"/>
+              <path d="M8 30c4-1 6-5 8-9 3 4 6 5 9 5-1-5 1-9 4-12-1 5 1 8 4 10" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M24 14c-3 2-5 6-5 10 0 5 2 9 5 12 3-3 5-7 5-12 0-4-2-8-5-10Z" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/>
+              <path d="M24 18v18" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+            </svg>
+            <span><span class="brand__name">Clínica <b>Quillay</b></span></span>
+          </a>
+          <p>Red de centros médicos con vocación de servicio. Cuidamos tu salud con cercanía, tecnología y compromiso.</p>
+          <div class="footer__social">
+            <a href="#" aria-label="Instagram"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg></a>
+            <a href="#" aria-label="Facebook"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="#" aria-label="YouTube"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 9a3 3 0 0 0-2-2.7C18 6 12 6 12 6s-6 0-8 .3A3 3 0 0 0 2 9v6a3 3 0 0 0 2 2.7C6 18 12 18 12 18s6 0 8-.3A3 3 0 0 0 22 15z"/><path d="m10 15 5-3-5-3z"/></svg></a>
+          </div>
+        </div>
+
+        <div>
+          <h4>Sedes</h4>
+          <div class="footer__sede">
+            <strong>Centro Cordillera</strong>
+            <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> Av. Providencia 1234, Providencia</span>
+          </div>
+          <div class="footer__sede">
+            <strong>Centro Costanera</strong>
+            <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> Av. Apoquindo 5678, Las Condes</span>
+          </div>
+          <div class="footer__sede">
+            <strong>Centro Maipú</strong>
+            <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> Av. Pajaritos 4321, Maipú</span>
+          </div>
+        </div>
+
+        <div>
+          <h4>Atención</h4>
+          <nav class="footer__links" aria-label="Enlaces de atención">
+            <a href="#reservar">Reservar hora</a>
+            <a href="#telemedicina">Telemedicina</a>
+            <a href="#resultados">Resultados de exámenes</a>
+            <a href="#portal">Portal Pacientes</a>
+            <a href="tel:6003600000">Call Center 600 360 0000</a>
+          </nav>
+        </div>
+
+        <div>
+          <h4>Clínica</h4>
+          <nav class="footer__links" aria-label="Enlaces institucionales">
+            <a href="#especialidades">Especialidades</a>
+            <a href="#equipo">Cuerpo médico</a>
+            <a href="#centros">Centros</a>
+            <a href="#noticias">Noticias de salud</a>
+            <a href="#paciente">Convenios y pagos</a>
+          </nav>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>© <span id="year">2026</span> Clínica Quillay (marca ficticia y editable). Todos los derechos reservados.</p>
+        <p><a href="#">Política de privacidad</a> · <a href="#">Derechos del paciente</a> · <a href="#">Términos</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts: vanilla, sin dependencias -->
+  <script src="assets/js/app.js" defer></script>
+  <script src="assets/js/booking.js" defer></script>
+</body>
+</html>
