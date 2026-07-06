@@ -1,1 +1,4 @@
 server.js
+.claude/
+.git/
+.env*
