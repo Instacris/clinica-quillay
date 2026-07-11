@@ -218,6 +218,16 @@ h1, h2, h3, h4 {
 .ph--logo { min-height: 64px; background: var(--white); border-color: var(--line); }
 .ph--logo::before { display: none; }
 
+/* Imagen real dentro de un contenedor de media (reemplaza a .ph) ---------- */
+.media-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: var(--ph-h, 200px);
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
 /* Skip link --------------------------------------------------------------- */
 .skip-link {
   position: absolute;
@@ -759,7 +769,9 @@ h1, h2, h3, h4 {
   overflow: hidden;
   box-shadow: var(--shadow-sm);
 }
+.center__media { aspect-ratio: 800 / 480; overflow: hidden; }
 .center__media .ph { border: none; border-radius: 0; border-bottom: 2px dashed var(--pine-300); }
+.center__media .media-img { border-radius: 0; height: 100%; }
 .center__body { padding: 20px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
 .center__body h3 { font-size: 1.2rem; }
 .center__list { display: grid; gap: 7px; margin: 4px 0; }
@@ -779,6 +791,7 @@ h1, h2, h3, h4 {
 @media (min-width: 720px) { .staff__grid { grid-template-columns: repeat(4, 1fr); } }
 
 .doctor {
+  display: flex; flex-direction: column;
   background: var(--white);
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -788,8 +801,10 @@ h1, h2, h3, h4 {
   transition: transform .2s ease, box-shadow .2s ease;
 }
 .doctor:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+.doctor__media { aspect-ratio: 1 / 1; overflow: hidden; }
 .doctor__media .ph { border: none; border-radius: 0; }
-.doctor__body { padding: 16px; }
+.doctor__media .media-img { border-radius: 0; height: 100%; }
+.doctor__body { padding: 16px; display: flex; flex-direction: column; flex: 1; }
 .doctor__body h3 { font-size: 1.06rem; }
 .doctor__spec { color: var(--pine); font-weight: 600; font-size: .88rem; margin-top: 2px; }
 .doctor__meta { color: var(--muted); font-size: .8rem; margin-top: 6px; }
@@ -922,7 +937,9 @@ h1, h2, h3, h4 {
   transition: transform .2s ease, box-shadow .2s ease;
 }
 .article:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+.article__media { aspect-ratio: 800 / 450; overflow: hidden; }
 .article__media .ph { border: none; border-radius: 0; }
+.article__media .media-img { border-radius: 0; height: 100%; }
 .article__body { padding: 20px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
 .article__meta { display: flex; gap: 10px; align-items: center; font-size: .8rem; color: var(--muted); }
 .article__cat {

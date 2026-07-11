@@ -4,7 +4,7 @@ const http = require("http");
 const fs = require("fs");
 const path = require("path");
 
-const PORT = 5500;
+const PORT = process.env.PORT || 5500;
 const ROOT = __dirname;
 const TYPES = {
   ".html": "text/html; charset=utf-8",
@@ -13,7 +13,9 @@ const TYPES = {
   ".svg": "image/svg+xml",
   ".json": "application/json",
   ".png": "image/png",
-  ".jpg": "image/jpeg"
+  ".jpg": "image/jpeg",
+  ".jpeg": "image/jpeg",
+  ".webp": "image/webp"
 };
 
 http.createServer((req, res) => {
