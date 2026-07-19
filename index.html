@@ -4,13 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Clínica Quillay · Cuidado que echa raíces</title>
-  <meta name="description" content="Clínica Quillay — red de centros médicos en Chile. Reserva de horas en línea, urgencia 24h, telemedicina, resultados de exámenes y atención con convenios FONASA e Isapres." />
+  <meta name="description" content="Clínica Quillay: red de centros médicos en Chile. Reserva de horas en línea, urgencia 24h, telemedicina, resultados de exámenes y atención con convenios FONASA e Isapres." />
 
   <!-- Única dependencia externa: tipografías (display + body). Quítala y el
        sitio cae elegantemente a fuentes del sistema definidas en :root. -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
@@ -104,15 +104,6 @@
             <a class="btn btn--lg btn--accent" href="#reservar">Reservar hora ahora</a>
             <a class="btn btn--lg btn--ghost" href="#telemedicina">Conocer telemedicina</a>
           </div>
-
-          <ul class="hero__trust">
-            <li><b>+40</b> especialidades médicas</li>
-            <li><b>3</b> centros en Santiago</li>
-            <li>
-              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
-              Convenios FONASA e Isapres
-            </li>
-          </ul>
         </div>
 
         <!-- ============ WIDGET DE RESERVA (demo, no envía datos) ========== -->
@@ -150,10 +141,10 @@
                 <label for="prevision">Previsión</label>
                 <select id="prevision" name="prevision" aria-describedby="prevError">
                   <option value="">Selecciona tu previsión…</option>
-                  <option value="FONASA A">FONASA — Tramo A</option>
-                  <option value="FONASA B">FONASA — Tramo B</option>
-                  <option value="FONASA C">FONASA — Tramo C</option>
-                  <option value="FONASA D">FONASA — Tramo D</option>
+                  <option value="FONASA A">FONASA Tramo A</option>
+                  <option value="FONASA B">FONASA Tramo B</option>
+                  <option value="FONASA C">FONASA Tramo C</option>
+                  <option value="FONASA D">FONASA Tramo D</option>
                   <option value="Isapre Banmédica">Isapre Banmédica</option>
                   <option value="Isapre Consalud">Isapre Consalud</option>
                   <option value="Isapre Cruz Blanca">Isapre Cruz Blanca</option>
@@ -235,6 +226,18 @@
       </svg>
     </section>
 
+    <!-- Datos de red, fuera del hero -->
+    <div class="trust-band" aria-label="Datos de la red">
+      <ul class="container hero__trust">
+        <li><b>+40</b> especialidades médicas</li>
+        <li><b>3</b> centros en Santiago</li>
+        <li>
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+          Convenios FONASA e Isapres
+        </li>
+      </ul>
+    </div>
+
     <!-- ===================================================================
          ACCESOS RÁPIDOS
          ================================================================ -->
@@ -285,7 +288,6 @@
       <div class="container">
         <div class="specialties__bar">
           <div class="section__head" style="margin-bottom:0">
-            <span class="eyebrow">Especialidades</span>
             <h2 class="section__title">Más de 40 áreas para cuidarte</h2>
           </div>
           <div class="specialties__tools">
@@ -310,7 +312,6 @@
     <section class="section section--mint" id="centros">
       <div class="container">
         <div class="section__head">
-          <span class="eyebrow">Centros y servicios</span>
           <h2 class="section__title">Tres sedes, una sola red de salud</h2>
           <p class="section__lead">Cada centro cuenta con laboratorio, imagenología y toma de muestras. La urgencia opera 24/7 en nuestra sede Cordillera.</p>
         </div>
@@ -344,7 +345,7 @@
               <h3>Centro Costanera</h3>
               <ul class="center__list">
                 <li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> Av. Apoquindo 5678, Las Condes</li>
-                <li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> Lun a Sáb · 07:00 – 21:00</li>
+                <li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> Lun a Sáb · 07:00 a 21:00</li>
               </ul>
               <div class="center__tags">
                 <span class="chip">Consultas</span>
@@ -363,7 +364,7 @@
               <h3>Centro Maipú</h3>
               <ul class="center__list">
                 <li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> Av. Pajaritos 4321, Maipú</li>
-                <li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> Lun a Sáb · 08:00 – 20:00</li>
+                <li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> Lun a Sáb · 08:00 a 20:00</li>
               </ul>
               <div class="center__tags">
                 <span class="chip">Pediatría</span>
@@ -382,7 +383,6 @@
     <section class="section" id="equipo">
       <div class="container">
         <div class="section__head">
-          <span class="eyebrow">Cuerpo médico</span>
           <h2 class="section__title">Especialistas en quienes confiar</h2>
           <p class="section__lead">Un equipo multidisciplinario con formación en los principales centros del país.</p>
         </div>
@@ -433,7 +433,6 @@
     <section class="section section--pine" id="telemedicina">
       <div class="container tele">
         <div class="tele__copy">
-          <span class="eyebrow">Telemedicina</span>
           <h2 class="section__title">Atención por video, con la misma calidez</h2>
           <p class="section__lead">Consulta con especialistas desde donde estés. Recibe indicaciones, recetas electrónicas y derivaciones sin salir de casa.</p>
 
@@ -469,7 +468,6 @@
     <section class="section" id="paciente">
       <div class="container">
         <div class="section__head">
-          <span class="eyebrow">Información al paciente</span>
           <h2 class="section__title">Coberturas, pagos y preguntas frecuentes</h2>
         </div>
 
@@ -573,7 +571,6 @@
     <section class="section section--mint" id="noticias">
       <div class="container">
         <div class="section__head">
-          <span class="eyebrow">Noticias de salud</span>
           <h2 class="section__title">Aprende a cuidarte mejor</h2>
         </div>
 

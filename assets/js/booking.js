@@ -236,7 +236,7 @@
       ["Hora", state.hora]
     ];
     summaryBox.innerHTML = filas.map(([k, v]) => `
-      <div class="summary__row"><dt>${k}</dt><dd>${v || "—"}</dd></div>`).join("");
+      <div class="summary__row"><dt>${k}</dt><dd>${v || "-"}</dd></div>`).join("");
   }
 
   /* --------------------------------------------------------------------------

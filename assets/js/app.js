@@ -12,6 +12,9 @@
 (function () {
   "use strict";
 
+  /* Con JS presente se habilitan los estados ocultos de .reveal (sin JS, todo visible) */
+  document.documentElement.classList.add("js");
+
   const $  = (sel, ctx = document) => ctx.querySelector(sel);
   const $$ = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;

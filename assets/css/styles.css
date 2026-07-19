@@ -20,15 +20,15 @@
   --ochre:    #e9a73c;   /* SECUNDARIO: flor de quillay (badges, datos)     */
 
   /* Neutros cálidos -------------------------------------------------------- */
-  --cream:    #faf5ec;   /* Fondo general                                   */
-  --sand:     #f2e9d8;   /* Superficie cálida                               */
+  --cream:    #f5f8f5;   /* Fondo general: blanco con el matiz de la marca  */
+  --sand:     #ecf1ec;   /* Superficie suave                                */
   --mint:     #e1ece6;   /* Superficie fría                                 */
-  --line:     #e2d9c7;   /* Bordes / separadores                           */
+  --line:     #dbe3db;   /* Bordes / separadores                           */
   --white:    #ffffff;
   --muted:    #5d6b64;   /* Texto secundario                               */
 
   /* Tipografías — display (titulares) + body (texto) ---------------------- */
-  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-display: "Source Serif 4", Georgia, "Times New Roman", serif;
   --font-body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 
   /* Escala, radios, sombras ----------------------------------------------- */
@@ -436,20 +436,21 @@ h1, h2, h3, h4 {
   max-width: 48ch;
 }
 .hero__cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+/* Banda de datos de red, justo bajo el hero */
+.trust-band { background: var(--mint); border-bottom: 1px solid var(--line); }
 .hero__trust {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px 22px;
-  margin-top: 30px;
-  padding-top: 24px;
-  border-top: 1px solid var(--line);
+  align-items: center;
+  gap: 10px 34px;
+  padding-block: 16px;
 }
 .hero__trust li {
   display: flex; align-items: center; gap: 9px;
   font-weight: 600; font-size: .92rem;
 }
 .hero__trust .icon { color: var(--pine); }
-.hero__trust b { font-family: var(--font-display); font-size: 1.5rem; color: var(--pine); }
+.hero__trust b { font-family: var(--font-display); font-size: 1.35rem; color: var(--pine); margin-right: 2px; }
 
 /* Widget de reserva ------------------------------------------------------- */
 .booking {
@@ -617,9 +618,10 @@ h1, h2, h3, h4 {
   cursor: pointer;
   font-weight: 600;
   font-size: .9rem;
-  transition: all .15s ease;
+  transition: background .15s ease, color .15s ease, border-color .15s ease;
 }
 .slot:hover { border-color: var(--pine-300); }
+.slot:active { transform: scale(.97); }
 .slot[aria-pressed="true"] { background: var(--pine); color: var(--white); border-color: var(--pine); }
 
 /* ----------------------------------------------------------------------------
@@ -1034,8 +1036,8 @@ h1, h2, h3, h4 {
   from { opacity: 0; transform: translateY(10px); }
   to   { opacity: 1; transform: translateY(0); }
 }
-.reveal { opacity: 0; transform: translateY(22px); transition: opacity .6s ease, transform .6s ease; }
-.reveal.is-in { opacity: 1; transform: none; }
+html.js .reveal { opacity: 0; transform: translateY(22px); transition: opacity .55s cubic-bezier(0.23, 1, 0.32, 1), transform .55s cubic-bezier(0.23, 1, 0.32, 1); }
+html.js .reveal.is-in { opacity: 1; transform: none; }
 
 /* ----------------------------------------------------------------------------
    18. NAV RESPONSIVE
